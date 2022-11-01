@@ -1,0 +1,255 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container-box {
+  background-color: #2d3436;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container-box .generator-box {
+  min-width: 25%;
+}
+.container-box .generator-box h1 {
+  font-size: 18px;
+  color: #ecf0f1;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 3px;
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+.container-box .generator-box .generated-password {
+  background-color: #535c68;
+  position: relative;
+}
+.container-box .generator-box .generated-password input[type=text] {
+  background-color: transparent;
+  width: 98%;
+  border: none;
+  outline: none;
+  color: #ecf0f1;
+  font-size: 25px;
+  padding: 10px 15px;
+}
+.container-box .generator-box .generated-password button {
+  background: unset;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.container-box .generator-box .generated-password button img {
+  width: 18px;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translate(0%, -50%);
+}
+.container-box .generator-box .generate-password-methods {
+  background-color: #535c68;
+  margin-top: 20px;
+  padding: 15px;
+  /* Progress */
+}
+.container-box .generator-box .generate-password-methods .length {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container-box .generator-box .generate-password-methods .length p {
+  color: #ecf0f1;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+}
+.container-box .generator-box .generate-password-methods .length p#pass-len {
+  color: #55efc4;
+  font-size: 24px;
+  font-weight: bold;
+}
+.container-box .generator-box .generate-password-methods .setrange {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 10px;
+  height: 6px;
+  background: transparent;
+  --webkitProgressPercent: 0%;
+  position: relative;
+}
+.container-box .generator-box .generate-password-methods .setrange:focus {
+  outline: none;
+}
+.container-box .generator-box .generate-password-methods .setrange::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  margin-top: -7px;
+  cursor: pointer;
+}
+.container-box .generator-box .generate-password-methods .setrange::-moz-range-thumb {
+  -moz-appearance: none;
+       appearance: none;
+  background: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.container-box .generator-box .generate-password-methods .setrange::-ms-thumb {
+  appearance: none;
+  background: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.container-box .generator-box .generate-password-methods .setrange::-webkit-slider-runnable-track {
+  background-color: #2d3436;
+  height: 6px;
+  border-radius: 10px;
+  background-image: linear-gradient(90deg, #55efc4 var(--webkitProgressPercent), #2d3436 var(--webkitProgressPercent));
+}
+.container-box .generator-box .generate-password-methods .setrange::-moz-range-track {
+  background-color: #2d3436;
+  height: 6px;
+  border-radius: 10px;
+}
+.container-box .generator-box .generate-password-methods .setrange::-ms-track {
+  background-color: #2d3436;
+  height: 6px;
+  border-radius: 10px;
+}
+.container-box .generator-box .generate-password-methods .setrange::-moz-range-progress {
+  height: 12px;
+  background-color: #55efc4;
+}
+.container-box .generator-box .generate-password-methods .setrange::-ms-fill-lower {
+  height: 12px;
+  background-color: #55efc4;
+}
+.container-box .generator-box .generate-password-methods .conditions {
+  margin-top: 40px;
+}
+.container-box .generator-box .generate-password-methods .conditions ul {
+  list-style: none;
+}
+.container-box .generator-box .generate-password-methods .conditions ul li {
+  color: #ecf0f1;
+  font-family: "Roboto", sans-serif;
+  word-spacing: 5px;
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 25px;
+  line-height: 1;
+}
+.container-box .generator-box .generate-password-methods .conditions ul li .checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: #2d3436;
+  border: 1px solid #ecf0f1;
+}
+.container-box .generator-box .generate-password-methods .conditions ul li .checkbox::after {
+  content: "";
+  display: none;
+  position: absolute;
+  left: 4px;
+  top: 1px;
+  width: 3px;
+  height: 7px;
+  border: solid #000;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+.container-box .generator-box .generate-password-methods .conditions ul li input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+  z-index: 1;
+  left: 0%;
+}
+.container-box .generator-box .generate-password-methods .conditions ul li input:checked + .checkbox {
+  background-color: #55efc4;
+}
+.container-box .generator-box .generate-password-methods .conditions ul li input:checked + .checkbox::after {
+  display: block;
+}
+.container-box .generator-box .generate-password-methods .strength {
+  background-color: #2d3436;
+  padding: 14px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0px;
+}
+.container-box .generator-box .generate-password-methods .strength h3 {
+  color: #ecf0f1;
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+.container-box .generator-box .generate-password-methods .strength .strength-meter {
+  display: flex;
+  justify-content: space-between;
+  width: 32%;
+  align-items: center;
+}
+.container-box .generator-box .generate-password-methods .strength .strength-meter #strent-type {
+  color: #ecf0f1;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  width: 55%;
+}
+.container-box .generator-box .generate-password-methods .strength .strength-meter span {
+  height: 22px;
+  width: 8px;
+  border: 1px solid #fff;
+  display: inline-block;
+}
+.container-box .generator-box .generate-password-methods .strength .strength-meter .fill {
+  background-color: #f9ca24;
+  border-color: #f9ca24;
+}
+.container-box .generator-box .generate-password-methods .gen-password {
+  background-color: #55efc4;
+  color: #000;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  padding: 14px 10px;
+  border: none;
+  font-weight: bold;
+  letter-spacing: 2px;
+  cursor: pointer;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #55efc4;
+}
+.container-box .generator-box .generate-password-methods .gen-password img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+.container-box .generator-box .generate-password-methods .gen-password:hover {
+  background-color: #ecf0f1;
+  transition: all 0.4s ease-in-out;
+}/*# sourceMappingURL=style.css.map */

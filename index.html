@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <META NAME="robots" CONTENT="noindex,nofollow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</head>
+<body>
+    <div class="container-box">
+        <div class="generator-box">
+            <h1>Passowrd Generator</h1>
+
+            <div class="generated-password">
+                <input type="text" readonly name="" placeholder="p4%@$er#78" id="genpass" value="">
+                <button id="copybutton"><img src="./images/copy.png" alt="" srcset=""></button>
+            </div>
+
+            <div class="generate-password-methods">
+                <div class="length">
+                    <p>Character Length</p>
+                    <p id="pass-len">0</p>
+                </div>
+                <input type="range" value="0" name="" id="" min="4" max="20" class="setrange">
+                <div class="conditions">
+                   <ul>
+                    <li> <input type="checkbox" name="" id="uppercase"> Include Uppercase Letter <span class="checkbox"></span>  </li>
+                    <li> <input type="checkbox" name="" id="lowercase"> Include Lowercase Letter <span class="checkbox"></span></li>
+                    <li> <input type="checkbox" name="" id="numercase"> Include Numbers <span class="checkbox"></span></li>
+                    <li> <input type="checkbox" name="" id="symbolcase"> Inlcude Symbols <span class="checkbox"></span></li>
+                   </ul>
+                </div>
+
+                <div class="strength">
+                    <h3>STRENGTH</h3>
+                    <div class="strength-meter">
+                        <p id="strent-type"></p>
+                        <span class=""></span>
+                        <span class=""></span>
+                        <span class=""></span>
+                        <span class=""></span>
+                    </div>
+                </div>
+
+                <button class="gen-password">GENERATE <img src="https://img.icons8.com/sf-black/64/000000/long-arrow-right.png"/></button>
+            </div>
+
+        </div>
+    </div>   
+
+    <script src="./main.js"></script>
+</body>
+</html>
